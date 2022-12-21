@@ -1,25 +1,37 @@
-import Home from "./Pages/Home/Home"
+import Home from "./Pages/Home/Home";
 import Nav from "./sections/Nav/Nav";
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-// import List from "./Pages/List/List";
+import List from "./Pages/List/List";
+import React from "react";
 
-function App() {
+export default class App extends React.Component {
+  
+  state ={
+    table:[]
+}
+clicks=(vals)=>{
+    this.setState({table:vals});
+}
+
+  
+ render(){
+
   return (
-   <><Nav/><Home/>
-   {/* <BrowserRouter>
-   
+   <>
+   <BrowserRouter>
+
+   <Nav/>
    <Routes>
     
-      <Route path="/Home" element={<Home/>} />
-      <Route path="/List" element={<List/>} />
+      <Route path="/" element={<Home clicks={this.clicks}/>} />
+      <Route path="/List" element={<List table={this.state.table}/>} />
    
    </Routes>
    
-   </BrowserRouter> */}
+   </BrowserRouter>
    
    </>
-  );
+  );}
 }
 
-export default App;
