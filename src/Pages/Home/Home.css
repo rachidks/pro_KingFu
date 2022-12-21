@@ -92,18 +92,17 @@ label {
    margin-top: 20px;
 }
 #radio{
-    left: 1100px;
+
 margin-top: 0px;
     
-    position:absolute;
     width: 30px;
     height: 30px;
 }
 #label_radio{
-    display:inline;
-    position:absolute;
+   
+   
     font-size: larger;
     font-family: 'Courier New', Courier, monospace;
-    
-  left: 900px;
+    margin-left: 50px;
+
 }
